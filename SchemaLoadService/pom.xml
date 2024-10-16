@@ -13,10 +13,18 @@
     <artifactId>SchemaLoadService</artifactId>
     <version>0.0.1</version>
 
+    <repositories>
+        <repository>
+            <id>GridGain External Repository</id>
+            <url>https://www.gridgainsystems.com/nexus/content/repositories/external</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <gridgain.version>8.8.9</gridgain.version>
     </properties>
 
     <dependencies>
@@ -36,6 +44,53 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>ignite-core</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>ignite-indexing</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>ignite-spring</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>ignite-opencensus</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>control-center-agent</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gridgain</groupId>
+            <artifactId>gridgain-ultimate</artifactId>
+            <version>${gridgain.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pubnub</groupId>
+            <artifactId>pubnub-gson</artifactId>
+            <version>4.23.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
         </dependency>
 
     </dependencies>

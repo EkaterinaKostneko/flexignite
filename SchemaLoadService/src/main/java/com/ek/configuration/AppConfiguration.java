@@ -26,7 +26,7 @@ public class AppConfiguration {
 
         // Setting up an IP Finder to ensure the client can locate the servers.
         TcpDiscoveryMulticastIpFinder ipFinder = new TcpDiscoveryMulticastIpFinder();
-        ipFinder.setAddresses(Collections.singletonList("109.172.89.16:49112"));
+        ipFinder.setAddresses(Collections.singletonList("109.172.89.16:47500"));
         cfg.setDiscoverySpi(new TcpDiscoverySpi().setIpFinder(ipFinder));
 
         Ignite ignite = Ignition.start(cfg);

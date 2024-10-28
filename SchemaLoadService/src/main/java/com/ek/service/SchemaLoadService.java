@@ -25,7 +25,7 @@ public class SchemaLoadService {
 
     public void createSchema(Map<String, Map<String, TableFields>> models) {
         try (IgniteClient client = Ignition.startClient(clientConfiguration)) {
-            ClientCache<Integer, String> igniteCache = client.cache("myCache");
+            ClientCache<Integer, String> igniteCache = client.getOrCreateCache("myCache");
 
             Map<String, TableFields> schemas = models.get("schemas");
             for (Map.Entry<String, TableFields> stringTableFieldsEntry : schemas.entrySet()) {

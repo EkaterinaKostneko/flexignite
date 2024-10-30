@@ -18,9 +18,9 @@ public class SchemaLoadController {
     @PostMapping
     public ResponseEntity<String> load(@RequestBody Map<String, Map<String, TableFields>> models) {
 
-        schemaLoadService.createSchema(models);
-
         System.out.println(models);
+
+        schemaLoadService.createSchema(models);
 
         return ResponseEntity.ok("GOOD");
     }

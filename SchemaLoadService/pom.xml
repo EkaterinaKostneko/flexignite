@@ -24,7 +24,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gridgain.version>8.8.9</gridgain.version>
+        <ignite.version>2.16.0</ignite.version>
     </properties>
 
     <dependencies>
@@ -45,40 +45,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.gridgain</groupId>
+            <groupId>org.apache.ignite</groupId>
             <artifactId>ignite-core</artifactId>
-            <version>${gridgain.version}</version>
+            <version>${ignite.version}</version>
         </dependency>
-
         <dependency>
-            <groupId>org.gridgain</groupId>
-            <artifactId>ignite-indexing</artifactId>
-            <version>${gridgain.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.gridgain</groupId>
+            <groupId>org.apache.ignite</groupId>
             <artifactId>ignite-spring</artifactId>
-            <version>${gridgain.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.gridgain</groupId>
-            <artifactId>ignite-opencensus</artifactId>
-            <version>${gridgain.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.gridgain</groupId>
-            <artifactId>control-center-agent</artifactId>
-            <version>${gridgain.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.gridgain</groupId>
-            <artifactId>gridgain-ultimate</artifactId>
-            <version>${gridgain.version}</version>
+            <version>${ignite.version}</version>
         </dependency>
 
         <dependency>

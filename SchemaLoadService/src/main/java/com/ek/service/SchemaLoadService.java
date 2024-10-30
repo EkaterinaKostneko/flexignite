@@ -28,7 +28,7 @@ public class SchemaLoadService {
             String tableName = stringTableFieldsEntry.getKey();
             TableFields fields = stringTableFieldsEntry.getValue();
 
-            String query = String.format("CREATE TABLE IF NOT EXISTS %s (%s)", tableName, createFieldsQuery(fields));
+            String query = String.format("CREATE TABLE IF NOT EXISTS %s (id bigint primary key, %s)", tableName, createFieldsQuery(fields));
 
             log.warn("QUERY to SAVE - {}", query);
 
